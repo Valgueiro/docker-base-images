@@ -1,4 +1,4 @@
 FROM alpine:latest
 
-RUN apk update
-RUN apk add git
+COPY ./install-dev-dependencies.sh /
+RUN sh /install-dev-dependencies.sh

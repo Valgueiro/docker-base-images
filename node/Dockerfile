@@ -1,3 +1,4 @@
-FROM valgueiro/alpine-core:latest
+FROM node:alpine
 
-RUN apk add --update nodejs npm
+COPY ./install-dev-dependencies.sh /
+RUN sh /install-dev-dependencies.sh
